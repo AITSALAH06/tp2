@@ -4,7 +4,10 @@
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
+    <script type="text/javascript" src="meteo.js"></script> 
     <style>
+
+  
       .menu {
         background: black;
         text-align: center;
@@ -25,30 +28,52 @@
       }
     </style>
   </head>
+<div id="choix_ville" onchange=showCity()>
+        <form method="POST" action="">
+            <p>
+                <label for="pays"> Choisir une ville: </label>
+                <select name="ville" id="pays"onchange=showCity()>
 
+                        <option  value="choix">--Please choose an option--</option>
+                        <option  value="Paris">Paris</option>
+                        <option  value="Lyon" >Lyon</option>
+                        <option  value="Marseille">Marseille</option>
+                 </select>
+            </p>
+            <p id="label"> votre choix: </p>
+        </form>
+    </div>
   <body>
+
+
     <div class="menu">
       <h1>TP Météo HTML</h1>
     </div>
 
-    <div class="ville">
+    </p>
+            <p id="label">Votre choix: </p>
+        </form>
+    </div>
+    <div id="container">
+     
+    <div class="ville" id="Paris">
       <p>Paris</p>
       <p>2°, pluvieux</p>
       <img class="image-meteo" src="noun_rain cloud_653878.svg"  />
     </div>
-
-    <div class="ville">
+ 
+    <div class="ville" id="Lyon">
       <p>Lyon</p>
       <p>2°, orageux</p>
       <img src="noun_lightning cloud_653879.svg" class="image-meteo" />
     </div>
 
-    <div class="ville">
+    <div class="ville" id="Marseille">
       <p>Marseille</p>
       <p>15°, ensoleillé </p>
       <img src="noun_sun_653889.svg" class="image-meteo" />
     </div>
-
-    <footer>Walid AIT SALAH et Khaled YACOUBE thenounproject</footer>
+</div>
+    <footer>Walid AIT SALAH et Khaled YACOUB thenounproject</footer>
   </body>
 </html>
